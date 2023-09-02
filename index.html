@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clothing Store</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width = device-width,initial-scale = 1.0"/>
+	<link rel="stylesheet" type="text/css" href="jeans.css">
+	<link rel="stylesheet" type="text/css" href="store.css">
+</head>
+<body>
+	<div class="top-nav">
+		<h2>LOGO</h2>
+		<span onclick="myNav()">&#9776;</span>
+	</div>
+	<div class="container">
+		<div id="nav">
+			<h1>LOGO</h1>
+			<div id="links">
+				<a href="#">Shirts</a>
+				<a href="#">Dresses</a>
+				<a class="active jean">Jeans</a>
+				<div>
+					<a href="#" class="active skin">Skinny</a>
+					<a href="#">Relaxed</a>
+					<a href="#">Bootcut</a>
+					<a href="#">Straight</a>
+				</div>
+				<a href="#">Jacket</a>
+				<a href="#">Gymwear</a>
+				<a href="#">Blazers</a>
+				<a href="#">Shoes</a>
+			</div>
+			<div>
+				<a href="#contact">Contact</a>
+				<a onclick="openN()">Newsletter</a>
+				<a href="#strong">Subscribe</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="tent">
+				<h2>Jeans</h2>
+				<div class="rel">
+					<img src="images/jeans.jpg" width="100%" alt="A man sitting in the woods"/>
+					<div>
+						<h1>New arrivals</h1>
+						<h2>COLLECTION 2023</h2>
+						<a href="#">Shop Now</a>
+					</div>
+				</div>
+				<div class="eight">
+					<h4>8 items</h4>
+					<div class="rows">
+						<div>
+							<img src="images/jeans1.jpg">
+							<p>Ripped Skinny Jeans</p>
+							<p><b>$24.99</b></p>
+						</div>
+						<div class="middle">
+							<div>
+								<img src="images/jeans2.jpg">
+								<b class="abs">New</b>
+								<button>Buy Now</button>
+							</div>
+							<p>Mega Ripped Jeans</p>
+							<p><b>$19.99</b></p>
+						</div>
+						<div class="middle soft">
+							<img src="images/jeans3.jpg">
+							<p>Washed Skinny Jeans</p>
+							<p><b>$20.50</b></p>
+						</div>
+						<div class="middle">
+							<img src="images/jeans4.jpg">
+							<p>Vintage Skinny Jeans</p>
+							<p><b>$14.99</b></p>
+						</div>
+					</div>
+					<div class="rows">
+						<div>
+							<img src="images/jeans2.jpg">
+							<p>Mega Ripped Jeans</p>
+							<p><b>$19.99</b></p>
+						</div>
+						<div class="middle">
+							<img src="images/jeans3.jpg">
+							<p>Washed Skinny Jeans</p>
+							<p><b>$20.50</b></p>
+						</div>
+						<div class="middle soft">
+							<div>
+								<img src="images/jeans4.jpg">
+								<b class="abs">New</b>
+								<button>Buy Now</button>
+							</div>
+							<p>Vintage Skinny Jeans</p>
+							<p><b class="four">$14.99</b></p>
+						</div>
+						<div class="middle">
+							<img src="images/jeans1.jpg">
+							<p>Ripped Skinny Jeans</p>
+							<p><b>$24.99</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="strong">
+				<h1>Subscribe</h1>
+				<p>To get special offers and VIP treatment:</p>
+				<form action="#" autocomplete="off" target="_self" >
+					<input type="email" name="email" placeholder="Enter e-mail" required="required">
+					<input type="submit" value="Subscribe">
+				</form>
+			</div>
+			<div class="tent" id="contact">
+				<div>
+					<h3>Contact</h3>
+					<p>Questions? Go ahead</p>
+					<form action="#" autocomplete="on" target="_self" onsubmit="myFunc()">
+						<input type="text" name="name" placeholder="Name" required="required" />
+						<input type="email" name="email" placeholder="Email" required="required" />
+						<input type="text" name="message" placeholder="Subject" required="required" />
+						<input type="text" name="message" placeholder="Message" required="required" />
+						<input type="submit" value="Send"/>
+					</form>
+				</div>
+				<div>
+					<h3>About</h3>
+					<a href="#">About us</a>
+					<a href="#">We're hiring</a>
+					<a href="#">Support</a>
+					<a href="#">Find store</a>
+					<a href="#">Shipment</a>
+					<a href="#">Payment</a>
+					<a href="#">Gift card</a>
+					<a href="#">Return</a>
+					<a href="#">Help</a>
+				</div>
+				<div id="store">
+					<h3>Store</h3>
+					<p>Company Name</p>
+					<p>+234 812 789 2388</p>
+					<p><a href="mailto:hasbunallahmubarak@gmail.com">ex@mail.com</a></p>
+					<h3>We Accept</h3>
+					<p>Amex</p>
+					<p>Credit Card</p>
+				</div>
+			</div>
+			<div class="footer">
+				<p>Developed by Hmabiola / Template from <a href="https://www.w3schools.com/w3css/tryw3css_templates_clothing_store.html#">W3schools</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="overlay" title="close menu" onclick="closeNav()"></div>
+	<div id="modal">
+		<div>
+			<span onclick="closeN()">&times;</span>
+			<h1>Newsletter</h1>
+			<p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+			<form action="#" target="_self" autocomplete="on">
+				<input type="email" name="email" placeholder="Enter e-mail"/>
+				<input type="submit" value="Subscribe" onclick="closeN()"/>
+			</form>
+		</div>
+		
+	</div>
+	<script>
+		var nav = document.getElementById('nav');
+		var overlay = document.getElementById('overlay');
+		function myFunc() {
+			alert("Are you sure wanna submit this?");
+		}
+		function myNav() {
+			nav.style.display = "block";
+			nav.style.zIndex = "2";
+			overlay.style.display = "block";
+		}
+		function closeNav() {
+			nav.style.display = "none";
+			overlay.style.display = "none";
+		}
+		var acc = document.getElementsByClassName('jean');
+		var i;
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				var close = this.nextElementSibling;
+				if (close.style.display === "block") {
+					close.style.display = "none";
+				} else {
+					close.style.display = "block";
+				}
+			});
+		}
+		function openN() {
+			document.getElementById('modal').style.display = "block";
+		}
+		function closeN() {
+			document.getElementById('modal').style.display = "none";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@media screen and (max-width: 1200px){
+	.container{padding: 0px 10px;}
+}
+@media screen and (max-width: 1000px){
+	#nav{display: none;}
+	.top-nav{display: block;}
+	.container{padding: 0px;
+	margin-top: 70px;}
+	.content{margin: 0px;}
+	.rel h1{font-size: 6vw;}
+	#overlay{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	cursor: pointer;
+	display: none;
+	background-color: rgba(0,0,0,0.2);}
+	#modal{padding: 10px;}
+	#modal > div{width: 650px;padding: 30px;}
+}
+@media screen and (max-width: 800px){
+	.rows > div{width: 48%;}
+	.rows div.soft{margin-left:0px;}
+	.rel h1{font-size: 7.5vw;}
+	.rel h2{display: none;}
+	.rel a{margin: 30px 0px;}
+	#modal > div{width: 99%;}
+}
